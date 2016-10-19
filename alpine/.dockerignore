@@ -1,4 +1,3 @@
-.travis.yml
 docker-compose.yml
 docker-compose.testing.yml
 README.md
