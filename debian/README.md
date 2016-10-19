@@ -18,4 +18,4 @@ Images are updated when new releases are published. The image with ``latest`` ta
 
 Start a localdef container as follows:
 
-    docker run --name some-name-proyect -e TZ="Europe/Madrid" -e IDIOM="es_ES" --rm -ti westerus/localdef:tag
+    docker run --name some-name-proyect -e TZ="Europe/Madrid" -e IDIOM="es_ES" --rm -ti westerus/localdef:debian-latest
