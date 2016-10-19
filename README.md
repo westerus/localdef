@@ -2,7 +2,7 @@
 
 # What is LocalDef?
 
-Custom docker containers with enbaled localset for define system LANG
+Custom docker containers with enabled localset for define system LANG
 
 # LocalDef agent images
 
