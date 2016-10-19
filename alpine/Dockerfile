@@ -28,7 +28,7 @@ ADD ${GLIBCURL}/glibc-${GLIBCV}.apk /tmp
 ADD ${GLIBCURL}/glibc-bin-${GLIBCV}.apk /tmp
 ADD ${GLIBCURL}/glibc-i18n-${GLIBCV}.apk /tmp
 
-RUN $PKGUPDATE && $PKGUPGRADE && $PKGINSTALL ca-certificates && \
+RUN $PKGUPDATE && $PKGUPGRADE && $PKGINSTALL ca-certificates /tmp/glibc* && \
 /usr/glibc-compat/bin/localedef -i ${IDIOM} -f UTF-8 ${IDIOM}.UTF-8 && \
 $PKGREMOVE ca-certificates && $DELTEMP
 
