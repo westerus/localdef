@@ -5,7 +5,7 @@
 FROM        alpine:latest
 MAINTAINER  Westerus <westerus@gmail.com>
 LABEL Description="This image is enabled locales language" \
-      Version="3.2"
+      Version="3.4"
 
 ARG PKG_FLAGS_COMMON="-q"
 ARG PKG_FLAGS_PERSISTANT="${PKG_FLAGS_COMMON} --clean-protected --no-cache"
