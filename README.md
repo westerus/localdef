@@ -8,7 +8,7 @@ Custom docker containers with enabled localset for define system LANG
 
 LocalDef are based on latest Alpine, jessie Debian and trusty Ubuntu images. The available versions of localdef are:
 
-    LocalDef Alpine 3.2 (tags: alpine-3.4, alpine-lates, latest)
+    LocalDef Alpine 3.4 (tags: alpine-3.4, alpine-lates, latest)
     LocalDef Denian Jessie (tags: debian-jessie, debian-latest)  
     LocalDef Ubuntu Trusty (tags: ubuntu-trusty, ubuntu-latest)
 
