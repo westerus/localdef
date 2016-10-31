@@ -20,6 +20,7 @@ ARG GLIBCV="2.23-r3"
 ARG GLIBCURL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBCV}"
 
 ENV IDIOM="es_ES" TZ="Europe/Madrid"
+ARG LOCALDEF="localedef -i ${IDIOM} -f UTF-8 ${IDIOM}.UTF-8"
 ENV PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin" \
 HOME="/root" TERM=xterm
 
@@ -30,7 +31,6 @@ ADD ${GLIBCURL}/glibc-i18n-${GLIBCV}.apk /tmp
 
 RUN $PKGUPDATE && $PKGUPGRADE && $PKGINSTALL ca-certificates /tmp/glibc* && \
 ln -s /usr/glibc-compat/bin/localedef /usr/bin/localedef && \
-localedef -i ${IDIOM} -f UTF-8 ${IDIOM}.UTF-8 && \
-$PKGREMOVE ca-certificates && $DELTEMP
+$LOCALDEF && $PKGREMOVE ca-certificates && $DELTEMP
 
 ENV LANG ${IDIOM}.UTF-8
